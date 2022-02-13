@@ -23,11 +23,12 @@ section {
   border-radius: 5px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   @apply shadow hover:shadow-lg flex flex-row justify-between items-center;
-  &.dark {
-    color: white;
-    background-color: rgba(17, 25, 40, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
+}
+
+section.darkerSection {
+  color: white;
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 section a {
@@ -39,11 +40,12 @@ header {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(79, 70, 229, 0.75);
   @apply shadow-lg text-white flex items-center h-12 w-screen pl-4;
-  &.dark {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-  }
+}
+
+header.darkerHeader {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
 }
 
 main {

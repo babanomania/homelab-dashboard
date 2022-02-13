@@ -14,12 +14,12 @@ export default function LinkItem({ logo, title, description, link }) {
   );
 
   return (
-    <section className="divide-x-2">
+    <section className="divide-x-2 dark:darkerSection">
       <span className="flex flex-row space-x-4 p-2">
         <img src={logo} className="w-12 h-12" alt="logo" />
         <div className="flex flex-col">
           <span>{title}</span>
-          <span className="text-xs text-gray-400">{description}</span>
+          <span className="text-xs text-gray-500">{description}</span>
         </div>
       </span>
       <a href={link}>
