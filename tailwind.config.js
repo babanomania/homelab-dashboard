@@ -1,14 +1,8 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "media",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extends: {
-      colors: {
-        accent: "#3ab7bf",
-      },
-    },
+    extends: {},
   },
   plugins: [],
 };

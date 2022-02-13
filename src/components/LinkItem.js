@@ -14,21 +14,17 @@ export default function LinkItem({ logo, title, description, link }) {
   );
 
   return (
-    <div className="card-w dark:color-b flex flex-row justify-between shadow hover:shadow-lg items-center divide-x-2">
+    <section className="divide-x-2">
       <span className="flex flex-row space-x-4 p-2">
-        <img src={logo} className="w-12 h-12" />
+        <img src={logo} className="w-12 h-12" alt="logo" />
         <div className="flex flex-col">
           <span>{title}</span>
           <span className="text-xs text-gray-400">{description}</span>
         </div>
       </span>
-      <div className="p-2 px-3">
-        <a href={link}>
-          <span className="text-sm text-blue-600 hover:text-blue-400 flex flex-row space-x">
-            <LinkIcon /> <span>open</span>
-          </span>
-        </a>
-      </div>
-    </div>
+      <a href={link}>
+        <LinkIcon /> <span>open</span>
+      </a>
+    </section>
   );
 }

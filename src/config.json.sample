@@ -7,4 +7,11 @@
       "description": "Network-wide Ad Blocking",
       "link": "http://192.168.29.100/admin"
     },
+    {
+      "logo": "/logos/bitwarden.png",
+      "title": "Vaultwarden",
+      "description": "OpenSource Password Manager",
+      "link": "https://192.168.29.101"
+    }
+  ]
 }

@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-body {
+.body-w {
   background-color: #4a90e2;
   background-image: radial-gradient(
       at 47% 33%,
@@ -12,20 +11,43 @@ body {
     radial-gradient(at 82% 65%, hsl(271.91, 99%, 54%) 0, transparent 55%);
 }
 
-.card-w {
+.body-b {
+  background-color: red;
+}
+
+section {
   color: black;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 5px;
   border: 1px solid rgba(209, 213, 219, 0.3);
+  @apply shadow hover:shadow-lg flex flex-row justify-between items-center;
+  &.dark {
+    color: white;
+    background-color: rgba(17, 25, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
 }
 
-.card-b {
-  color: "white";
+section a {
+  @apply p-2 px-3 text-sm text-blue-600 hover:text-blue-400 flex flex-row space-x-1;
+}
+
+header {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: rgba(79, 70, 229, 0.75);
+  @apply shadow-lg text-white flex items-center h-12 w-screen pl-4;
+  &.dark {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+  }
 }
+
+main {
+  @apply p-4 pt-6;
+}
+
+@tailwind utilities;
