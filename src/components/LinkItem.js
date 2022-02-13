@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function LinkItem({ logo, title, description, link }) {
+export default function LinkItem({
+  logo,
+  title,
+  description,
+  link,
+  isDarkMode,
+}) {
   const LinkIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,12 +20,16 @@ export default function LinkItem({ logo, title, description, link }) {
   );
 
   return (
-    <section className="divide-x-2 dark:darkerSection">
+    <section
+      className={`divide-x-2 ${
+        isDarkMode ? "darkerSection divide-gray-700" : ""
+      }`}
+    >
       <span className="flex flex-row space-x-4 p-2">
         <img src={logo} className="w-12 h-12" alt="logo" />
         <div className="flex flex-col">
           <span>{title}</span>
-          <span className="text-xs text-gray-500">{description}</span>
+          <span className="text-xs description">{description}</span>
         </div>
       </span>
       <a href={link}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import config from "../config.json";
 
@@ -35,16 +35,18 @@ const DarkMode = () => (
   </svg>
 );
 
-export default function Layout({ children }) {
-  const [isDarkMode, setDarkMode] = useState(false);
-
+export default function Layout({ children, isDarkMode, setDarkMode }) {
   return (
-    <div className={`w-screen min-h-screen ${isDarkMode ? "dark" : ""}`}>
+    <div
+      className={`w-screen min-h-screen ${
+        isDarkMode ? "content-dark" : "content"
+      }`}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>{config.name}</title>
       </Helmet>
-      <header className="dark:darkerHeader">
+      <header className={isDarkMode ? "darkerHeader" : ""}>
         <span className="flex flex-row justify-between w-screen ">
           <span className="flex flex-row space-x-2">
             <Logo /> <span>{config.name}</span>

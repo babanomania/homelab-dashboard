@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 
-.body-w {
+.content {
   background-color: #4a90e2;
   background-image: radial-gradient(
       at 47% 33%,
@@ -11,8 +11,9 @@
     radial-gradient(at 82% 65%, hsl(271.91, 99%, 54%) 0, transparent 55%);
 }
 
-.body-b {
-  background-color: red;
+.content-dark {
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #1b2845 10%, #274060 74%);
 }
 
 section {
@@ -29,10 +30,19 @@ section.darkerSection {
   color: white;
   background-color: rgba(17, 25, 40, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid rgba(17, 25, 40, 0.8);
 }
 
 section a {
   @apply p-2 px-3 text-sm text-blue-600 hover:text-blue-400 flex flex-row space-x-1;
+}
+
+section .description {
+  @apply text-gray-500;
+}
+
+section.darkerSection .description {
+  @apply text-gray-400;
 }
 
 header {
