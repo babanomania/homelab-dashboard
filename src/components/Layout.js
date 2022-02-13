@@ -48,7 +48,7 @@ export default function Layout({ children, isDarkMode, setDarkMode }) {
       </Helmet>
       <header className={isDarkMode ? "darkerHeader" : ""}>
         <span className="flex flex-row justify-between w-screen ">
-          <span className="flex flex-row space-x-2">
+          <span className="flex flex-row space-x-2 items-center">
             <Logo /> <span>{config.name}</span>
           </span>
           <span
