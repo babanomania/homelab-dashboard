@@ -1,0 +1,10 @@
+{
+  "name": "Homelab Dashboard",
+  "bookmarks": [
+    {
+      "logo": "/logos/pihole.webp",
+      "title": "PiHole",
+      "description": "Network-wide Ad Blocking",
+      "link": "http://192.168.29.100/admin"
+    },
+}
